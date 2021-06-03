@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Care4U</string>
+    <string name="content">A medical check up camp for the patient was carried out, diagnosis was made and medications given.
+    Medication given will be said below as well as the necessary information concerning the diagnosis.
+    A detailed information of the health report should be given here.</string>
+
+</resources>

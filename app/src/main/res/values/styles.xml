@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorPrimaryDark">#2E7D32</item>
+        <item name="colorAccent">#42A5F5</item>
+    </style>
+
+    <style name="myMaterialTheme" parent="MaterialTheme.Base" />
+
+    <style name="MaterialTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/PPR_GREEN500</item>
+        <item name="colorPrimaryDark">@color/PPR_GREEN800</item>
+        <item name="colorAccent">@color/PPR_BLUE400</item>
+
+    </style>
+
+    <style name="myGreyTheme" parent="BlueGrayTheme.Base"/>
+
+    <style name="BlueGrayTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="windowActionBar">true</item>
+        <item name="colorPrimary">@color/PPR_GREY400</item>
+        <item name="colorPrimaryDark">@color/PPR_GREY700</item>
+        <item name="colorAccent">@color/PPR_BLUE400</item>
+    </style>
+
+    <style name="myBlueTheme" parent="BlueTheme.Base"/>
+
+    <style name="BlueTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="windowActionBar">true</item>
+        <item name="colorPrimary">@color/PPR_BLUE400</item>
+        <item name="colorPrimaryDark">@color/PPR_BLUE700</item>
+        <item name="colorAccent">@color/PPR_GREY400</item>
+    </style>
+
+    <style name="myPurpleTheme" parent="BlueGrayTheme.Base"/>
+    <style name="PurpleTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="windowActionBar">true</item>
+        <item name="colorPrimary">@color/PPR_PURPLE500</item>
+        <item name="colorPrimaryDark">@color/PPR_PURPLE700</item>
+        <item name="colorAccent">@color/PPR_GREY400</item>
+    </style>
+
+</resources>
