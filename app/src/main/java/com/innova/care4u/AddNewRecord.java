@@ -10,9 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-/**
- * Created by Oluwatobi on 7/16/2037.
- */
 
 public class AddNewRecord extends AppCompatActivity {
     EditText title, content, cost;

@@ -17,9 +17,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.innova.care4u.AttendNewPatient;
 import com.innova.care4u.R;
 
-/**
- * Created by Oluwatobi on 7/16/2037.
- */
 
 public class FingerPrintActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
@@ -27,7 +24,6 @@ public class FingerPrintActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.finger_print_activity);
-
 
         progressDialog  = new ProgressDialog(this);
         progressDialog.setMessage("Please wait, verifying finger print data...");
