@@ -20,12 +20,7 @@
         android:name=".ApplicationInstance"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:theme="@style/myGreyTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity" android:theme="@style/myGreyTheme"/>
         <activity android:name=".AddNewRecord" android:theme="@style/myMaterialTheme"/>
         <activity android:name=".AttendNewPatient" android:theme="@style/myBlueTheme"/>
         <activity android:name=".RegisterNewPatient" android:theme="@style/myMaterialTheme"/>
@@ -33,6 +28,15 @@
         <activity android:name=".fingerPrintDeals.FingerPrintActivity" android:theme="@style/myGreyTheme"/>
         <activity android:name=".PaymentActivity" android:theme="@style/myPurpleTheme"/>
         <activity android:name=".LargerView" android:theme="@style/myGreyTheme"/>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
     </application>
 

@@ -5,6 +5,24 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="12dp"
+        android:id="@+id/text_fingerprint"
+        android:text="Fingerprint Authentication"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_below="@+id/text_fingerprint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/textview"/>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_centerInParent="true"
@@ -26,7 +44,7 @@
         android:layout_below="@id/finger_id"
         android:gravity="center"
         android:id="@+id/dsd"
-        android:text="Kindly place your thumb on the Secugen fingerprint scanning device"/>
+        android:text="Kindly place your thumb on the fingerprint scanning device"/>
 
     <Button
         android:layout_width="match_parent"
