@@ -42,6 +42,7 @@
         android:background="@color/white"
         android:src="@drawable/logout"
         android:padding="10dp"
+        android:onClick="Signout"
         />
 
     <ImageView

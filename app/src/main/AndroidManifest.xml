@@ -6,29 +6,48 @@
         android:name="android.hardware.fingerprint"
         android:required="true" />
 
-        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-        <uses-permission android:name="android.permission.CAMERA"/>
-        <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-        <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".ApplicationInstance"
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:roundIcon="@drawable/icon"
-        android:name=".ApplicationInstance"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:theme="@style/myGreyTheme"/>
-        <activity android:name=".AddNewRecord" android:theme="@style/myMaterialTheme"/>
-        <activity android:name=".AttendNewPatient" android:theme="@style/myBlueTheme"/>
-        <activity android:name=".RegisterNewPatient" android:theme="@style/myMaterialTheme"/>
-        <activity android:name=".HistoryActivity" android:theme="@style/myBlueTheme"/>
-        <activity android:name=".fingerPrintDeals.FingerPrintActivity" android:theme="@style/myGreyTheme"/>
-        <activity android:name=".PaymentActivity" android:theme="@style/myPurpleTheme"/>
-        <activity android:name=".LargerView" android:theme="@style/myGreyTheme"/>
-        <activity android:name=".QRactivity" android:theme="@style/myGreyTheme"/>
+        <activity android:name=".Login"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/myGreyTheme" />
+        <activity
+            android:name=".AddNewRecord"
+            android:theme="@style/myMaterialTheme" />
+        <activity
+            android:name=".AttendNewPatient"
+            android:theme="@style/myBlueTheme" />
+        <activity
+            android:name=".RegisterNewPatient"
+            android:theme="@style/myMaterialTheme" />
+        <activity
+            android:name=".HistoryActivity"
+            android:theme="@style/myBlueTheme" />
+        <activity
+            android:name=".fingerPrintDeals.FingerPrintActivity"
+            android:theme="@style/myGreyTheme" />
+        <activity
+            android:name=".PaymentActivity"
+            android:theme="@style/myPurpleTheme" />
+        <activity
+            android:name=".LargerView"
+            android:theme="@style/myGreyTheme" />
+        <activity
+            android:name=".QRactivity"
+            android:theme="@style/myGreyTheme" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
@@ -38,8 +57,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
-
 
 </manifest>

@@ -19,12 +19,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fingerprint"
+        android:text="CARE4U"
+        android:layout_marginTop="25dp"
         android:textSize="40sp"
         android:textColor="@color/white"
-        android:textStyle="bold"
+        android:textStyle="normal"
         android:paddingEnd="32dp"
         android:id="@+id/bigone"
+        android:gravity="center"
         android:paddingStart="32dp"/>
     <TextView
         android:layout_width="match_parent"
@@ -34,7 +36,9 @@
         android:textColor="@color/white"
         android:layout_below="@id/bigone"
         android:id="@+id/bigtwo"
-        android:text="Using biometrics to protect and validate health records and owners identity"/>
+        android:gravity="center"
+        android:textSize="17dp"
+        android:text="Using Blockcahin &amp; Biometrics to protect and validate health records and owners identity"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,6 +46,7 @@
         android:background="@drawable/white_rounded"
         android:gravity="center"
         android:id="@+id/cont"
-        android:text="Continue as an health practitioner"
+        android:onClick="authenticate"
+        android:text="Continue as an Health Practitioner"
         android:layout_margin="32dp"/>
 </RelativeLayout>

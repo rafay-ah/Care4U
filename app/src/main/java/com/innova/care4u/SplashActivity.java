@@ -20,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        Intent intent = new Intent(this, FingerPrintActivity.class);
+        Intent intent = new Intent(this, Login.class);
         startActivity(intent);
         finish();
     }
