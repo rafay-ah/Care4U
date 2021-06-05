@@ -48,6 +48,7 @@ import javax.crypto.SecretKey;
 public class FingerPrintActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
    public static Context context;
+   public static String cipherKey; // key to generate the qr coded
 
     // Biometric Authentication -- supports native as well as modern android devices
     private static final String KEY_NAME = "yourKey"; // Declare a string variable for the key i am going to use in our fingerprint authentication
@@ -106,6 +107,7 @@ public class FingerPrintActivity extends AppCompatActivity {
                 if (initCipher()) {
                     //If the cipher is initialized successfully, then create a CryptoObject instance//
                     cryptoObject = new FingerprintManager.CryptoObject(cipher);
+//                    cipherKey = String.valueOf(cipher);
 
                     // Here, I’m referencing the FingerprintHandler class that we’ll create in the next section. This class will be responsible
                     // for starting the authentication process (via the startAuth method) and processing the authentication process events//
@@ -209,6 +211,7 @@ public class FingerPrintActivity extends AppCompatActivity {
             keyStore.load(null);
             SecretKey key = (SecretKey) keyStore.getKey(KEY_NAME,
                     null);
+            cipherKey = String.valueOf(key);
             cipher.init(Cipher.ENCRYPT_MODE, key);
             //Return true if the cipher has been initialized successfully//
             return true;
@@ -244,7 +247,7 @@ public class FingerPrintActivity extends AppCompatActivity {
                 progressDialog.cancel();
                 Toast.makeText(activity_context, "Fingerprint matched", Toast.LENGTH_SHORT).show();
 
-                activity_context.startActivity(new Intent(activity_context, MainActivity.class));
+                activity_context.startActivity(new Intent(activity_context, MainActivity.class).putExtra("KEY", cipherKey));
 
             }
         }, 3000);

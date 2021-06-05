@@ -4,7 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.core.app.ActivityCompat;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -63,8 +63,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void generateQr(View view)
     {
+        String cipherKey= getIntentData();
         Intent intent=new Intent(context,QRactivity.class);
+        intent.putExtra("KEY", cipherKey);
         startActivity(intent);
         finish();
+    }
+
+    public String getIntentData()
+    {// gets the cipher key from biometric authentication
+        Intent intent = getIntent();
+        String cipherKey = intent.getStringExtra("KEY");
+        return cipherKey;
     }
 }

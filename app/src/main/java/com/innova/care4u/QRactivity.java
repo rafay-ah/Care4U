@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
@@ -25,24 +26,33 @@ public class QRactivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qractivity);
 
+        String text=getIntentData(); // Whatever we need to encode in the QR code-- biometric key
+
         ImageView imageView=(ImageView)findViewById(R.id.image);
         ((Button)(findViewById(R.id.back))).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(),MainActivity.class).putExtra("KEY",text));
             }
         });
 
 
-        String text="Abdul Rafay"; // Whatever you need to encode in the QR code
         MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
         try {
             BitMatrix bitMatrix = multiFormatWriter.encode(text, BarcodeFormat.QR_CODE,700,700);
             BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
             Bitmap bitmap = barcodeEncoder.createBitmap(bitMatrix);
             imageView.setImageBitmap(bitmap);
+            Toast.makeText(QRactivity.this, "The Biometric Key Encoded in QR Code is : "+ text, Toast.LENGTH_LONG).show();
         } catch (WriterException e) {
             e.printStackTrace();
         }
+    }
+
+    public String getIntentData()
+    {// gets the cipher key from biometric authentication
+        Intent intent = getIntent();
+        String cipherKey = intent.getStringExtra("KEY");
+        return cipherKey;
     }
 }
