@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    style="@style/ActionButtonStyle"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/white"
+    android:elevation="5dp">
+
+    <ImageView
+        android:id="@+id/toolbar_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/icon"
+
+         />
+
+    <TextView
+        android:id="@+id/toolbar_heading"
+        style="@style/toolbar_text_appearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="@string/app_name"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+         />
+
+    <ImageView
+        android:id="@+id/logout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="end"
+        android:background="@color/white"
+        android:src="@drawable/logout"
+        android:padding="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/down"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end"
+        android:background="@color/white"
+        android:src="@drawable/key"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:onClick="generateQr"
+        />
+
+</androidx.appcompat.widget.Toolbar>

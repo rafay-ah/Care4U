@@ -10,19 +10,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:textSize="60sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="Phalanx"/>
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
+            android:layout_marginTop="10dp"
             android:text="Your finger, your data, your health."/>
 
      <LinearLayout
@@ -58,7 +55,7 @@
              android:background="@drawable/grey_gradient"
              android:textColor="@color/black"
              android:textStyle="bold"
-             android:text="Contact phalanx"/>
+             android:text="Contact Us"/>
      </LinearLayout>
 
 

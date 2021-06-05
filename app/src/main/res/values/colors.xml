@@ -38,6 +38,9 @@
 
     <color name="PPR_PURPLE_ACCENT_700">#FFAA00FF</color>
 
+    <drawable name="transparent">#00000000</drawable>
+    <drawable name="pressed_color">#33FFFFFF</drawable>
+
 
 
 

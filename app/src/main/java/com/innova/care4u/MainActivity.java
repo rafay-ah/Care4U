@@ -1,6 +1,7 @@
 package com.innova.care4u;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.core.app.ActivityCompat;
@@ -14,17 +15,19 @@ import com.innova.care4u.fingerPrintDeals.FingerPrintActivity;
 
 public class MainActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
+    Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        
         setContentView(R.layout.activity_main);
+        context = this;
         LinearLayout linearLayoutOne = (LinearLayout)findViewById(R.id.registerNew);
         LinearLayout linearLayoutTwo = (LinearLayout)findViewById(R.id.attendPatient);
         LinearLayout linearLayoutThree = (LinearLayout)findViewById(R.id.paymentId);
 
         progressDialog  = new ProgressDialog(this);
-        progressDialog.setMessage("Synchronizing data to blockchain");
+        progressDialog.setMessage("Synchronizing data to blockchain ledgers");
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.setCancelable(false);
 
@@ -56,5 +59,12 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Successfully synchronized", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    public void generateQr(View view)
+    {
+        Intent intent=new Intent(context,QRactivity.class);
+        startActivity(intent);
+        finish();
     }
 }

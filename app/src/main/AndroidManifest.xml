@@ -28,6 +28,7 @@
         <activity android:name=".fingerPrintDeals.FingerPrintActivity" android:theme="@style/myGreyTheme"/>
         <activity android:name=".PaymentActivity" android:theme="@style/myPurpleTheme"/>
         <activity android:name=".LargerView" android:theme="@style/myGreyTheme"/>
+        <activity android:name=".QRactivity" android:theme="@style/myGreyTheme"/>
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
