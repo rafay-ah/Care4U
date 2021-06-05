@@ -1,8 +1,5 @@
 package com.innova.care4u;
 
-/**
- * Created by Oluwatobi on 7/16/2037.
- */
 
 public class HistoricalPojo {
     String title, cost,hospital_name, date;

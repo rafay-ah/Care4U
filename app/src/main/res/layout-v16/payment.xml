@@ -20,7 +20,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:id="@+id/backFrom"
+                    android:id="@+id/backFromWallet"
+                    android:onClick="backFromWallet"
                     app:srcCompat="@drawable/ic_arrow_back_white_24dp"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -29,7 +30,7 @@
                     android:textSize="40sp"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:text="Wallet balance: 1498 USD"/>
+                    android:text="Wallet balance: 1498 CRX"/>
 
             </LinearLayout>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -51,7 +52,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="For every 100 biometric validations, #2000 naira worth of PHX is being charged."
+                android:text="For every 100 biometric validations, #2000 USD worth of CRX is being charged."
                 />
 
             <TextView

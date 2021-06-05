@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         linearLayoutTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, FingerPrintActivity.class));
+                startActivity(new Intent(MainActivity.this, AttendNewPatient.class));
             }
         });
         linearLayoutThree.setOnClickListener(new View.OnClickListener() {

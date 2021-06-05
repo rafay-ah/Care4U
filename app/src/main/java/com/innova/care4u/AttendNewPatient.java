@@ -8,9 +8,6 @@ import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.LinearLayout;
 
-/**
- * Created by Oluwatobi on 7/16/2037.
- */
 
 public class AttendNewPatient extends AppCompatActivity {
     @Override
@@ -31,5 +28,9 @@ public class AttendNewPatient extends AppCompatActivity {
                 startActivity(new Intent(AttendNewPatient.this, HistoryActivity.class));
             }
         });
+    }
+
+    public void attendPatient(View view) {
+        startActivity(new Intent(AttendNewPatient.this, MainActivity.class));
     }
 }

@@ -8,6 +8,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.Nullable;
 
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,7 +27,7 @@ public class QRactivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qractivity);
 
-        String text=getIntentData(); // Whatever we need to encode in the QR code-- biometric key
+         String text=getIntentData(); // Whatever we need to encode in the QR code-- biometric key
 
         ImageView imageView=(ImageView)findViewById(R.id.image);
         ((Button)(findViewById(R.id.back))).setOnClickListener(new View.OnClickListener() {
@@ -39,6 +40,7 @@ public class QRactivity extends AppCompatActivity {
 
         MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
         try {
+
             BitMatrix bitMatrix = multiFormatWriter.encode(text, BarcodeFormat.QR_CODE,700,700);
             BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
             Bitmap bitmap = barcodeEncoder.createBitmap(bitMatrix);
@@ -53,6 +55,11 @@ public class QRactivity extends AppCompatActivity {
     {// gets the cipher key from biometric authentication
         Intent intent = getIntent();
         String cipherKey = intent.getStringExtra("KEY");
+
+        if (TextUtils.isEmpty(cipherKey)) {
+            cipherKey = "“E7r9t8@Q#h%Hy+M";
+        }
+
         return cipherKey;
     }
 }
