@@ -18,6 +18,7 @@ import com.innova.care4u.fingerPrintDeals.FingerPrintActivity;
 public class MainActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     Context context;
+    TextView contact;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,4 +110,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void goToContactUs(View view) {
+        contact = findViewById(R.id.contact);
+        startActivity(new Intent(MainActivity.this, ContactUs.class));
+    }
 }
