@@ -5,9 +5,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.Nullable;
 
-/**
- * Created by Oluwatobi on 7/16/2037.
- */
 
 public class Dashboard extends AppCompatActivity {
     @Override

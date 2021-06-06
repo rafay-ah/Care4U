@@ -55,6 +55,7 @@
              android:background="@drawable/grey_gradient"
              android:textColor="@color/black"
              android:textStyle="bold"
+             android:onClick="goToContactUs"
              android:text="Contact Us"/>
      </LinearLayout>
 
