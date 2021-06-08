@@ -12,10 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-/**
- * Created by Oluwatobi on 7/16/2037.
- */
-
 public class HistoricalAdapter extends RecyclerView.Adapter<HistoricalAdapter.HistoricalViewHolder> {
     ArrayList<HistoricalPojo> historicalPojos;
     Context context;

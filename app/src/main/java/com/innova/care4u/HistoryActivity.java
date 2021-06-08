@@ -10,9 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 
-/**
- * Created by Oluwatobi on 7/16/2037.
- */
 
 public class HistoryActivity extends AppCompatActivity {
     @Override

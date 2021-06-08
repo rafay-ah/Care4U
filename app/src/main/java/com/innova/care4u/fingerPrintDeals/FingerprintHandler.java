@@ -17,8 +17,8 @@ import com.innova.care4u.MainActivity;
 @TargetApi(Build.VERSION_CODES.M)
 public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
 
-    // You should use the CancellationSignal method whenever your app can no longer process user input, for example when your app goes
-    // into the background. If you don’t use this method, then other apps will be unable to access the touch sensor, including the lockscreen!//
+    // We should use the CancellationSignal method whenever the app can no longer process user input, for example when app goes
+    // into the background. If we don’t use this method, then other apps will be unable to access the touch sensor, including the lockscreen!//
 
     private CancellationSignal cancellationSignal;
     private static Context context;

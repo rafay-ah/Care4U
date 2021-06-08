@@ -86,7 +86,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="For someone is new to the phalanx ecosystem. Register their biometric data, collate their profile."
+                android:text="For someone is new to the CARE4U ecosystem. Register their biometric data, collate their profile."
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:paddingBottom="4dp"
@@ -158,7 +158,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="See your wallet balance and load your wallet with PHX using credit card to gain biometric verification access."
+                    android:text="See your wallet balance and load your wallet with CLX using credit card to gain biometric verification access."
                     android:textSize="16sp"
                     android:textColor="@color/white"
                     android:paddingBottom="4dp"
@@ -168,5 +168,5 @@
 
 
     </LinearLayout>
-
+s
 </androidx.core.widget.NestedScrollView>

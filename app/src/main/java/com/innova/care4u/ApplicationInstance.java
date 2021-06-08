@@ -4,9 +4,6 @@ import android.app.Application;
 
 import java.util.ArrayList;
 
-/**
- * Created by Oluwatobi on 7/16/2037.
- */
 
 public class ApplicationInstance extends Application {
     private static ArrayList<HistoricalPojo> historicalPojoList;
