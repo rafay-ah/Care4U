@@ -43,6 +43,7 @@
         android:src="@drawable/logout"
         android:padding="10dp"
         android:onClick="Signout"
+        android:visibility="gone"
         />
 
     <ImageView
@@ -54,6 +55,7 @@
         android:src="@drawable/key"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:onClick="generateQr"
+        android:visibility="gone"
         />
 
 </androidx.appcompat.widget.Toolbar>

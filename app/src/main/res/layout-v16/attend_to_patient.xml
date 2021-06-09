@@ -2,63 +2,28 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/PPR_BLUE400"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@+id/attendPatient_toolbar"
+        layout="@layout/toolbar"/>
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/PPR_BLUE400"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/toolbar">
-
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:id="@+id/backFromAttendPatient"
-                    android:onClick="attendPatient"
-                    app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:text="Attend to patient"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </com.google.android.material.appbar.CollapsingToolbarLayout >
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/nestedScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        >
 
         <LinearLayout
+
+            app:layout_constraintTop_toBottomOf="@id/attendPatient_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
 
             <de.hdodenhof.circleimageview.CircleImageView
+
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
-                android:src="@drawable/bella" />
+                android:src="@drawable/man"
+                android:layout_marginBottom="10dp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -66,7 +31,8 @@
                 android:layout_gravity="center"
                 android:gravity="center_horizontal"
                 android:text="Sherlock Holmes"
-                android:textColor="@color/white"
+                android:id="@+id/patient_name"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <TextView
@@ -75,7 +41,8 @@
                 android:layout_gravity="center"
                 android:gravity="center_horizontal"
                 android:text="3 years old, Switzerland"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
+                android:id="@+id/patient_address"
                 android:textSize="20sp" />
 
             <TextView
@@ -84,8 +51,9 @@
                 android:layout_gravity="center"
                 android:gravity="center_horizontal"
                 android:text="A child of Mr and Mrs Watson Holmes"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:id="@+id/patient_parentname"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -93,9 +61,10 @@
                 android:layout_gravity="center"
                 android:gravity="center_horizontal"
                 android:text="0811002233"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textIsSelectable="true"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:id="@+id/patient_phonenumber"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -164,5 +133,4 @@
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

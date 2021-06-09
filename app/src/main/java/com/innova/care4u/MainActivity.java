@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
        
         setContentView(R.layout.activity_main);
+        loadToolabar();
         context = this;
         LinearLayout linearLayoutOne = (LinearLayout)findViewById(R.id.registerNew);
         LinearLayout linearLayoutTwo = (LinearLayout)findViewById(R.id.attendPatient);
@@ -113,5 +116,20 @@ public class MainActivity extends AppCompatActivity {
     public void goToContactUs(View view) {
         contact = findViewById(R.id.contact);
         startActivity(new Intent(MainActivity.this, ContactUs.class));
+    }
+
+    public void loadToolabar()
+    {
+        // to make the visisbility of sigout and
+        // QR code generator icon ..
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        ImageView logout = (ImageView) toolbar.findViewById(R.id.logout);
+        ImageView qrCode = (ImageView) toolbar.findViewById(R.id.down);
+
+        logout.setVisibility(View.VISIBLE);
+        qrCode.setVisibility(View.VISIBLE);
+//        toolbar.addView(logout);
+//        toolbar.addView(qrCode);
     }
 }

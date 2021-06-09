@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,8 +7,29 @@
     android:focusable="true"
     android:clickable="true"
     android:layout_marginLeft="2dp"
+    android:orientation="horizontal"
+
+    android:layout_margin="10dp"
+    android:id="@+id/relativeLayout"
+    android:background="@drawable/round_views"
+    android:gravity="right"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_weight="0.5"
+        android:background="@drawable/man"
+        android:layout_marginEnd="10dp"
+        />
+
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1.5"
     android:orientation="vertical"
-    android:id="@+id/relativeLayout">
+    >
 
     <TextView
         android:id="@+id/item_name"
@@ -28,7 +49,7 @@
         android:layout_width="120sp"
         android:layout_height="25sp"
         android:text="phone"
-        android:textAlignment="textEnd"
+        android:textAlignment="textStart"
         android:textColor="#606060"
         android:textSize="15sp"
         app:layout_constraintRight_toRightOf="parent"
@@ -37,8 +58,8 @@
 
     <TextView
         android:id="@+id/item_email"
-        android:layout_width="270sp"
-        android:layout_height="20sp"
+        android:layout_width="207dp"
+        android:layout_height="wrap_content"
         android:ellipsize="end"
         android:maxLines="5"
         android:text="parent name"
@@ -52,11 +73,20 @@
         android:layout_height="20sp"
         android:ellipsize="end"
         android:maxLines="5"
-        android:text="s.no"
-        android:textAlignment="textEnd"
+        android:text="address"
+        android:textAlignment="textStart"
         android:textColor="@color/colorPrimary"
         android:textColorHighlight="#707070"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/item_email"
         app:layout_constraintTop_toBottomOf="@+id/item_phone" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/arrow_right"/>
+</LinearLayout>

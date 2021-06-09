@@ -44,6 +44,7 @@ public class ViewPatients extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_patients);
         loadToolabar();
+
         patientDB = new PatientDB(this);
 
         renderPatientview();
@@ -120,8 +121,8 @@ public class ViewPatients extends AppCompatActivity {
                 Log.d("ViewPatients", "onClick()");
                 mCurrPatient = patlist.get(position);
                 if (!mCurrPatient.Name.equals("Empty")) {
-                    Intent intent = new Intent(ViewPatients.this, HistoryActivity.class);
-//                    intent.putExtra("patient", mCurrPatient);
+                    Intent intent = new Intent(ViewPatients.this, AttendNewPatient.class);
+                    intent.putExtra("patient", mCurrPatient);
 //                    intent.putExtra("doctor", mDoctor);
                     startActivity(intent);
                 }
