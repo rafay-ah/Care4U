@@ -10,14 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.innova.care4u.Model.PatientDB.DATABASE_VERSION;
-import static com.innova.care4u.Model.PatientDB.PATIENT_LIST;
 import static com.innova.care4u.Model.PatientDB.MAIN_DATABASE;
 
 public class TreatmentDB extends SQLiteOpenHelper {
     public static final String TREAT_ID = "tid";
     private boolean mDbChanged = false;
 
-    private String TAG = "PRMS-TreatmentDB";
+    private String TAG = "TreatmentDB";
 
 
     // Database creation sql statement
@@ -28,7 +27,7 @@ public class TreatmentDB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
-        //database.execSQL(DATABASE_CREATE);
+//        database.execSQL(DATABASE_CREATE);
     }
 
 
@@ -89,7 +88,7 @@ public class TreatmentDB extends SQLiteOpenHelper {
 
         String query = "INSERT INTO " + tablename + " (date, complaint, prescription, doctor) VALUES ('" +
                 treat.date + "', '" + treat.complaint + "', '" + treat.prescription + "', '" +
-                treat.doctor + "')";
+                treat.cost + "')";
 
         Log.d(TAG, query + " on " + db.getPath());
         try {
@@ -218,7 +217,7 @@ public class TreatmentDB extends SQLiteOpenHelper {
         for (Treatment trt : trtList) {
             Log.d(TAG, trt.date + "==" + inTrt.date + " && " + trt.complaint + "==" + inTrt.complaint);
             if (trt.date.equals(inTrt.date) && trt.complaint.equals(inTrt.complaint) &&
-                    trt.prescription.equals(inTrt.prescription) && trt.doctor.equals(inTrt.doctor)) {
+                    trt.prescription.equals(inTrt.prescription) && trt.cost.equals(inTrt.cost)) {
                 return true;
             }
         }

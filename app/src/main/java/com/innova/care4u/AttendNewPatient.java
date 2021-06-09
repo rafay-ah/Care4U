@@ -22,19 +22,19 @@ public class AttendNewPatient extends AppCompatActivity {
         getIntentData();
         populatePatientDetails();
         LinearLayout linearLayoutOne = (LinearLayout)findViewById(R.id.newRecordsId);
-        LinearLayout linearLayoutTwo = (LinearLayout)findViewById(R.id.historicalRecordsId);
+//        LinearLayout linearLayoutTwo = (LinearLayout)findViewById(R.id.historicalRecordsId);
         linearLayoutOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AttendNewPatient.this, AddNewRecord.class));
+                startActivity(new Intent(AttendNewPatient.this, AddNewRecord.class).putExtra("patient", selectedPatient));
             }
         });
-        linearLayoutTwo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AttendNewPatient.this, HistoryActivity.class));
-            }
-        });
+//        linearLayoutTwo.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(AttendNewPatient.this, HistoryActivity.class).putExtra("patient", selectedPatient));
+//            }
+//        });
     }
 
     public void attendPatient(View view) {

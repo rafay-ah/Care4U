@@ -5,12 +5,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Treatment implements Serializable {
-    Patient patient;
-    String date;
-    String complaint;
-    String prescription;
-    String doctor;
-    String tid;
+    public Patient patient;
+    public String date;
+    public String complaint;
+    public  String prescription;
+    public String cost;
+    public String tid;
 
     public Treatment(Patient pat, String id, String comp, String pres, String doc) {
         // get current date and  convert to simple readable format
@@ -24,6 +24,6 @@ public class Treatment implements Serializable {
             complaint = comp.replace("'","");
         if (pres != null)
             prescription = pres.replace("'","");
-        doctor = doc;
+        cost = doc;
     }
 }
